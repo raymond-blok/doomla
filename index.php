@@ -18,13 +18,15 @@ function getContent()
 
 	if($content == null)
 	{
-		echo "de pagina $page is niet gevonden";
+		$pagecontent = "de pagina $page is niet gevonden";
 	}
 	else
 	{
-		return $content['content'];
+		$pagecontent = $content['content'];
 	}
+	return $pagecontent;
 }
+
 function getMenu()
 {
 	if(isset($_GET['page']))
@@ -38,15 +40,17 @@ function getMenu()
 
 	$db = new mysqli('localhost','root','','doomla');
 
-	$query = "SELECT menuoption FROM pagecontent";
+	$query = "SELECT menuoption , page FROM pagecontent";
 	$result = $db -> query($query);
 	$menuoptions = $result -> fetch_all(MYSQLI_ASSOC);
-	echo "<ul>";
+	$menu = "<ul>";
+
 	foreach($menuoptions as $menuoption){
-		echo "<li><a href=?page=$page>$menuoption[menuoption]</a></li>";
+		$menu = $menu . "<li><a href=?page=$menuoption[page]>$menuoption[menuoption]</a></li>";
 	}
 	
-	echo "</ul>";
+	$menu = $menu . "<ul>";
+	return $menu;
 
 }
 
