@@ -5,3 +5,11 @@ table, th, td {
 th, td {
     padding: 15px;
 }
+    .container {
+        width: 500px;
+        clear: both;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
