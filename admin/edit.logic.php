@@ -8,8 +8,12 @@ if(isset($_POST['submit'])){
 	$page = $_POST['page'];
 	$menu = $_POST['menu'];
 	$content = $_POST['content'];
+<<<<<<< HEAD
 	$menuorder = $_POST['order'];
 	$query = "UPDATE pagecontent SET page='$page', menuoption='$menu', content='$content', menuorder='$menuorder' WHERE id=$id";
+=======
+	$query = "UPDATE pagecontent SET page='$page', menuoption='$menu', content='$content' WHERE id=$id";
+>>>>>>> origin/master
 	$result = $db -> query($query);
 	header('location: index.php');
 }
