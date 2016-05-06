@@ -18,7 +18,7 @@ function getContent()
 
 	if($content == null)
 	{
-		$pagecontent = "de pagina $page is niet gevonden";
+		$pagecontent = "<h1>de pagina $page is niet gevonden</h1>";
 	}
 	else
 	{
@@ -40,7 +40,7 @@ function getMenu()
 
 	$db = new mysqli('localhost','root','','doomla');
 
-	$query = "SELECT menuoption , page FROM pagecontent";
+	$query = "SELECT menuoption , page FROM pagecontent ORDER BY menuorder";
 	$result = $db -> query($query);
 	$menuoptions = $result -> fetch_all(MYSQLI_ASSOC);
 	$menu = "<ul>";
