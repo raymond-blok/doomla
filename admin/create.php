@@ -11,15 +11,19 @@
 <body>
 	<section class="container">
 		<h1>Add page</h1>
-		<form action="create.php" method="post">
-			<label for="page">Page:</label>
-			<input type="text" id="page" name="page"><br>
-			<label for="menu">Menu-option:</label>
-			<input type="text" id="menu" name="menu"><br>
-			<label for="content">Content:</label>
-			<textarea name="content" rows="5" cols="40" id="Content" ></textarea><br>
-			<input type="submit" name="submit" value="submit">
+		<ul class="list" id="list2">
+			<li>Page:</li>
+			<li>Menu-option:</li>
+			<li>Content:</li>
+		</ul>
+		<form action="create.php" method="post" class="form">
+			<input type="text" name="page" class="input_width"><br>
+			<input type="text" name="menu" class="input_width"><br>
+			<textarea name="content" rows="20" class="input_width"></textarea><br>
+			<input type="submit" name="submit" value="submit" id="button">
+			<a href="index.php">cancel</a>
 		</form>
+		
 	</section>
 </body>
 </html>
