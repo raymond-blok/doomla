@@ -7,7 +7,8 @@ if(isset($_POST['submit'])):
 	$menu = $_POST['menu'];
 	$content = $_POST['content'];
 	$menuorder = $_POST['order'];
-	$query = "INSERT INTO pagecontent (page, menuoption, content, menuorder) VALUES ('$page', '$menu', '$content', '$menuorder')";
+	$template = $_POST['temp'];
+	$query = "INSERT INTO pagecontent (page, menuoption, content, menuorder, template) VALUES ('$page', '$menu', '$content', '$menuorder', '$template')";
 	$result = $db -> query($query);
 	header('location: index.php');
 endif;

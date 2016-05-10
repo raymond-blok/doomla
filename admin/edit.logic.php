@@ -9,7 +9,8 @@ if(isset($_POST['submit'])){
 	$menu = $_POST['menu'];
 	$content = $_POST['content'];
 	$menuorder = $_POST['order'];
-	$query = "UPDATE pagecontent SET page='$page', menuoption='$menu', content='$content', menuorder='$menuorder' WHERE id=$id";
+	$template = $_POST['temp'];
+	$query = "UPDATE pagecontent SET page='$page', menuoption='$menu', content='$content', menuorder='$menuorder', template='$template' WHERE id=$id";
 	$result = $db -> query($query);
 	header('location: index.php');
 }
@@ -19,6 +20,12 @@ elseif(is_numeric($_GET['id']))
 	$result = $db -> query($query);
 
 	$pagecontent = $result -> fetch_assoc();
+	
+	if ($pagecontent['template'] == "night.php") {
+		$check = "checked";
+	} else {
+		$check = "";
+	}
 }
 else
 {

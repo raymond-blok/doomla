@@ -22,6 +22,8 @@
 			<input type="text" name="menu" class="input_width"><br>
 			<input type="number" name="order" class="input_width"><br>
 			<textarea name="content" rows="20" class="input_width"></textarea><br>
+			<input type="checkbox" name="temp" value="night.php" id="check">
+			<label>dark theme</label><br>
 			<input type="submit" name="submit" value="submit" id="button">
 			<a href="index.php">cancel</a>
 		</form>
