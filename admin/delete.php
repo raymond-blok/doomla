@@ -18,18 +18,12 @@
 	<ul class="list" id="list1">
 		<li>page:</li>
 		<li>menuoption:</li>
-<<<<<<< HEAD
 		<li>menu-order:</li>
-=======
->>>>>>> origin/master
 	</ul>
 	<ul class="list">
 		<li><?= $page['page'];?></li>
 		<li><?= $page['menuoption'];?></li>
-<<<<<<< HEAD
 		<li><?= $page['menuorder'];?></li>
-=======
->>>>>>> origin/master
 	</ul>
 	<section id="content">
 		<p id="content_word">content:</p>

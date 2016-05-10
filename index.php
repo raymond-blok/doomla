@@ -1,40 +1,36 @@
 <?php
-function getContent()
+function database()
 {
-	if(isset($_GET['page']))
-	{
+	if(isset($_GET['page'])) {
 		$page = $_GET['page'];
-	}
-	else
-	{
+	} else {
 		$page = 'home';
 	}
 
 	$db = new mysqli('localhost','root','','doomla');
 
-	$query = "SELECT content FROM pagecontent WHERE page='$page'";
+	$query = "SELECT * FROM pagecontent WHERE page='$page'";
 	$result = $db -> query($query);
-	$content = $result -> fetch_assoc();
+	$data = $result -> fetch_assoc();
+	return $data;
+}
+function getContent($data)
+{
 
-	if($content == null)
-	{
+
+	if($data == null) {
 		$pagecontent = "<h1>de pagina $page is niet gevonden</h1>";
-	}
-	else
-	{
-		$pagecontent = $content['content'];
+	} else {
+		$pagecontent = $data['content'];
 	}
 	return $pagecontent;
 }
 
 function getMenu()
 {
-	if(isset($_GET['page']))
-	{
+	if(isset($_GET['page'])) {
 		$page = $_GET['page'];
-	}
-	else
-	{
+	} else {
 		$page = 'home';
 	}
 
@@ -53,5 +49,13 @@ function getMenu()
 	return $menu;
 
 }
+$data = database();
 
-require "templates/template.php";
+$template = "template.php";
+
+if($data['template'] != null) {
+	$template = $data['template'];
+}
+
+
+require "templates/$template";

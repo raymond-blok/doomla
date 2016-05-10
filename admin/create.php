@@ -14,24 +14,17 @@
 		<ul class="list" id="list2">
 			<li>Page:</li>
 			<li>Menu-option:</li>
-<<<<<<< HEAD
 			<li>Menu-order:</li>
-=======
->>>>>>> origin/master
 			<li>Content:</li>
 		</ul>
 		<form action="create.php" method="post" class="form">
 			<input type="text" name="page" class="input_width"><br>
 			<input type="text" name="menu" class="input_width"><br>
-<<<<<<< HEAD
 			<input type="number" name="order" class="input_width"><br>
-=======
->>>>>>> origin/master
 			<textarea name="content" rows="20" class="input_width"></textarea><br>
 			<input type="submit" name="submit" value="submit" id="button">
 			<a href="index.php">cancel</a>
 		</form>
-		
 	</section>
 </body>
 </html>

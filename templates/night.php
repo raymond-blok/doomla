@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>doomla</title>
-	<link rel="stylesheet" type="text/css" href="templates/css/style.css">
+	<link rel="stylesheet" type="text/css" href="templates/css/night.css">
 	<link rel="stylesheet" type="text/css" href="templates/css/fonts/stylesheet.css">
 </head>
 <body>		
