@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>doomla</title>
+	<title><?=$data['page']?></title>
 	<link rel="stylesheet" type="text/css" href="templates/css/night.css">
 	<link rel="stylesheet" type="text/css" href="templates/css/fonts/stylesheet.css">
 </head>

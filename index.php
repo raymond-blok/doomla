@@ -42,7 +42,11 @@ function getMenu()
 	$menu = "<ul>";
 
 	foreach($menuoptions as $menuoption){
-		$menu = $menu . "<li><a href=?page=$menuoption[page]>$menuoption[menuoption]</a></li>";
+		if($menuoption['page'] == $page) {
+			$menu = $menu . "<li><a href=?page=$menuoption[page] class=active >$menuoption[menuoption]</a></li>";
+		} else {
+			$menu = $menu . "<li><a href=?page=$menuoption[page]>$menuoption[menuoption]</a></li>";
+		}
 	}
 	
 	$menu = $menu . "<ul>";

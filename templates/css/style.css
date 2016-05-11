@@ -3,12 +3,12 @@
 	padding: 0;
 }
 body, html{
-	color: #696969; 
 	height: 100%;
 }
 
 section.container{
 	background-color: #FAFAFA; 
+	color: #696969;
 	min-height: 100%;
 	font-family: 'marlbororegular';
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
@@ -47,25 +47,28 @@ nav.menu ul{
 nav.menu ul li{
 	text-decoration: none;
 	display: inline-block;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 nav.menu ul li a{
 	text-decoration: none;
-	padding-right: 5px;
-	padding: 10px 5px 10.5px 5px;
+	padding: 10px 5.5px 10px 5.5px;
 	color: #FFFFFF;
 }
 
 nav.menu ul li a:hover{
-	background-color: white;
+	background-color: #FAFAFA;
 	color: #01BAD6;
 }
 
 footer.footer{
 	height: 20px;
 	text-align: center;
+	color: #696969;
+}
+
+nav.menu ul li a.active{
+	background-color: #FAFAFA;
+	color: #01BAD6;
 }
 
 .push{
