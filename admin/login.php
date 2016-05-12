@@ -6,15 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-	<section>
+	<section class="container">
 		<h1>Login</h1>
 		<ul>
 			<li>Username:</li>
 			<li>Password:</li>
 		</ul>
-		<form>
-			<input type="text">
-			<input type="text">
+		<form action="login.php">
+			<input type="text" name="user">
+			<input type="text" name="pass">
 			<button>Login</button>
 		</form>
 	</section>

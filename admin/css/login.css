@@ -3,19 +3,27 @@
 	margin: 0;
 }
 
-section{
-	width: 65%;
+section.container{
+	width: 500px;
 	margin: 5% auto auto auto;
+	height: 100px;
 }
 
-section ul{
+section.container ul{
 	display: inline-block;
+	float: left;
 }
 
-section ul li{
+section.container ul li{
 	display: block;
+	margin-right: 20px;
+	font-size: 16px;
 }
 
-section form{
+section.container form{
 	display: inline-block;
+}
+
+section.container form input{
+	display: block;
 }
